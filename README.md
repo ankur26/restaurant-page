@@ -1,4 +1,4 @@
-# Restaurant Page - The Odin Project Series.
+# Restaurant Page - The Odin Project Series Full Stack Javascript.
 
 ## Overview
 
@@ -10,3 +10,4 @@ In this project we will primarily be exploring the current state of Javascript w
 3. ES6 imports and exports
 4. More interesting features of npm such a script runners etc.
 
+### Original page : [Link](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/restaurant-page)
