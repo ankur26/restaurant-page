@@ -9,6 +9,9 @@ Functionality is split in 4 primary parts:
 */
 
 const helper = require('./helper');
+const mainpage = require('./mainpage');
+const contactpage = require('./contactpage');
+const menupage = require('./menupage');
 let contentDiv = document.getElementById('content');
 // contentDiv.textContent = 'Testing purposes only.';
 
@@ -28,15 +31,15 @@ contentDiv.appendChild(helper.renderDiv("",[],"page"));
 const pageDiv = document.getElementById('page');
 function renderMainPage(){
     pageDiv.innerHTML = '';
-    pageDiv.appendChild(helper.renderDiv('You clicked on the main page'));
+    pageDiv.appendChild(mainpage.render());
 }
 function renderMenuPage(){
     pageDiv.innerHTML = '';
-    pageDiv.appendChild(helper.renderDiv('You clicked on the Menu Page'));
+    pageDiv.appendChild(menupage.render());
 }
 function renderContactPage(){
     pageDiv.innerHTML = '';
-    pageDiv.appendChild(helper.renderDiv('You clicked on the Contact page'));
+    pageDiv.appendChild(contactpage.render());
 }
 // function eventListner
 const mainPageLink = document.getElementById('main');
