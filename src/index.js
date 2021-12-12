@@ -50,3 +50,4 @@ const contactPageLink = document.getElementById('contact');
 mainPageLink.addEventListener('click',renderMainPage);
 menuPageLink.addEventListener('click',renderMenuPage);
 contactPageLink.addEventListener('click',renderContactPage);
+renderMainPage();
