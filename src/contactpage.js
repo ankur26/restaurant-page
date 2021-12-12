@@ -81,7 +81,7 @@ const renderForm = () => {
 }
 
 const renderReviewDiv = (review,customer) => {
-    let div = helper.renderDiv();
+    let div = helper.renderDiv("",["review"]);
     let reviewh3 = helper.renderElement({
         element:"h3",
     });
@@ -98,15 +98,19 @@ const renderReviewDiv = (review,customer) => {
 const render = () =>{
     let maincontent = document.getElementById('page');
     maincontent.innerHTML = '';
+    maincontent.classList.add('contact');
+    maincontent.classList.remove('main');
+    maincontent.classList.remove('menu');
 
-    let reviewDiv = helper.renderDiv();
+
+    let reviewDiv = helper.renderDiv("",["reviews"]);
     let review1 = renderReviewDiv("Absolutely Fantastic Food!","Random Customer 1");
     let review2 = renderReviewDiv("The Idlis are to die for !","Random Customer 2");
     let review3 = renderReviewDiv("Fantastic Ambience and food to match","Random Customer 3");
     reviewDiv.appendChild(review1);
     reviewDiv.appendChild(review2);
     reviewDiv.appendChild(review3);
-    let contactFormDiv = helper.renderDiv();
+    let contactFormDiv = helper.renderDiv("",["form"]);
     let contactFormTitle = helper.renderElement({
         element:"h2",
     });

@@ -3,6 +3,8 @@ import restaurantFrontImage from './restuarant-front-page.jpg';
 const render = () => {
 	let maincontent = document.getElementById('page');
 	maincontent.innerHTML = '';
+    maincontent.classList.remove('menu');
+    maincontent.classList.remove('contact');
 	maincontent.classList.add('main');
 	// Div With image
 	let div1 = helper.renderDiv('', [ 'main-page-img' ]);
