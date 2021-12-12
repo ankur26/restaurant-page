@@ -8,7 +8,7 @@ const renderDiv = (content = '', classlist = [], id = '') => {
 	let div = document.createElement('div');
 	div.textContent = content;
 	classlist.forEach(c=> div.classList.add(c));
-	div.id = id !== '' ? id : '';
+	if(id !== '') div.id = id;
 	return div;
 };
 const renderH1 = (content = '', classlist = []) => {
