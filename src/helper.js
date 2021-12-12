@@ -1,6 +1,6 @@
 const renderImage = (src = 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png', id = '') => {
 	let img = new Image();
-	img.src = restaurantimg;
+	img.src = src;
 	img.setAttribute('id', id === '' ? '' : id);
 	return img;
 };
@@ -37,6 +37,24 @@ const renderHeader = (elements = [], classList = []) => {
 	}
 	return header;
 };
+
+const renderList = (listType="",items=[])=>{
+	if (listType === "" ){
+		throw new Error("List Cannot be Blank");
+		return;
+	}
+	try {
+		let list = document.createElement(listType);
+		items.forEach(item=>{
+			let li = document.createElement("li");
+			li.textContent = item;
+			list.appendChild(li);
+		});
+		return list;
+	} catch (error) {
+		console.error(error);
+	}
+}
 
 const renderNavMenu = (items = [], classListItem = [], classList = []) => {
 	let nav = document.createElement('nav');
@@ -85,4 +103,4 @@ const renderElement= (elementObject) => {
     }
 }
 
-export { renderElement,renderDiv, renderImage, renderHeader, renderNavMenu, renderH1 };
+export {renderList, renderElement,renderDiv, renderImage, renderHeader, renderNavMenu, renderH1 };

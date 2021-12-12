@@ -16,7 +16,7 @@ let contentDiv = document.getElementById('content');
 // contentDiv.textContent = 'Testing purposes only.';
 
 const renderMainMenu = () => {
-	const title = helper.renderH1('My Generic Bar');
+	const title = helper.renderH1('Idli-cious!');
 	const navbar = helper.renderNavMenu([
 		{ id: 'main', text: 'About Us', link: '#' },
 		{ id: 'menu', text: 'Menu', link: '#' },

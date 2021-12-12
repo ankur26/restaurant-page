@@ -1,7 +1,11 @@
 const helper = require('./helper');
 
 const render = () =>{
-    return helper.renderDiv('You are accesing the menu page using the menu page file');
+    let maincontent = helper.renderDiv();
+    //Title 
+    let menuH2 = helper.renderElement({element:"h2"});
+    //
+    
 }
 
 export  {render};
