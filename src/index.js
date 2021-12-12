@@ -7,6 +7,7 @@ Functionality is split in 4 primary parts:
 3. Review and contact page.
 4. Main menu for tab switching.
 */
+import './style.css';
 
 const helper = require('./helper');
 const mainpage = require('./mainpage');
@@ -28,18 +29,18 @@ const renderMainMenu = () => {
 
 contentDiv.appendChild(renderMainMenu());
 contentDiv.appendChild(helper.renderDiv("",[],"page"));
-const pageDiv = document.getElementById('page');
+// const pageDiv = document.getElementById('page');
 function renderMainPage(){
-    pageDiv.innerHTML = '';
-    pageDiv.appendChild(mainpage.render());
+    // pageDiv.innerHTML = '';
+    mainpage.render();
 }
 function renderMenuPage(){
-    pageDiv.innerHTML = '';
-    pageDiv.appendChild(menupage.render());
+    // pageDiv.innerHTML = '';
+   menupage.render();
 }
 function renderContactPage(){
-    pageDiv.innerHTML = '';
-    pageDiv.appendChild(contactpage.render());
+    // pageDiv.innerHTML = '';
+    contactpage.render();
 }
 // function eventListner
 const mainPageLink = document.getElementById('main');

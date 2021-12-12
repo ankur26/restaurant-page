@@ -6,8 +6,8 @@ import appe from "./appe.jpg";
 const renderMenuItem = (item,image,content) => {
     let div = helper.renderDiv();
     let im = helper.renderImage(image);
-    im.style.width = "100%";
-    im.style.height = "auto";
+    // im.style.width = "100%";
+    // im.style.height = "auto";
     let h3 = helper.renderElement({element:"h3"});
     h3.textContent = item;
     let p = helper.renderElement({element:"p"});
@@ -19,7 +19,9 @@ const renderMenuItem = (item,image,content) => {
 }
 
 const render = () =>{
-    let maincontent = helper.renderDiv();
+    let maincontent = document.getElementById('page');
+    maincontent.innerHTML = '';
+
     //Title 
     let menuH2 = helper.renderElement({element:"h2"});
     menuH2.textContent = "Some of our standout items to try."
@@ -36,7 +38,6 @@ const render = () =>{
 
     maincontent.appendChild(menuH2);
     maincontent.appendChild(divMenu);
-    return maincontent;
 }
 
 export  {render};

@@ -1,6 +1,5 @@
-
-
 const helper = require('./helper');
+
 
 const renderForm = () => {
     let form = helper.renderElement({element:"form"});
@@ -97,7 +96,9 @@ const renderReviewDiv = (review,customer) => {
 }
 
 const render = () =>{
-    let maincontent = helper.renderDiv();
+    let maincontent = document.getElementById('page');
+    maincontent.innerHTML = '';
+
     let reviewDiv = helper.renderDiv();
     let review1 = renderReviewDiv("Absolutely Fantastic Food!","Random Customer 1");
     let review2 = renderReviewDiv("The Idlis are to die for !","Random Customer 2");
@@ -116,7 +117,7 @@ const render = () =>{
     maincontent.appendChild(reviewDiv);
     maincontent.appendChild(contactFormDiv);
     // maincontent.appendChild(form);
-    return maincontent;
+
 }
 
 export {render};
