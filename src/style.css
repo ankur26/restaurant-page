@@ -8,10 +8,11 @@
     background-color: lightsalmon;
 }
 #content{
-    /* display: flex;
-    flex-flow: column nowrap;
-    align-items: center; */
+    margin:0 auto;
+    /* flex-flow: column nowrap; */
+    /* align-items: center; */
     padding:0 5%;
+    max-width: 1400px;
 }
 a{
     color: black;
@@ -41,13 +42,16 @@ img{
 }
 .main{
     display: flex;
-    
+    flex-flow: row;
+    align-items: center;
 }
 .main-page-img{
     min-width: 50%;
 }
 .main-page-content{
     padding:10%;
+    /* min-width: 50%; */
+    width: 50%;
 }
 .main-page-content ul{
     padding: 0;
@@ -95,6 +99,13 @@ form, form div{
 }
 input,label{
     margin:5px;
+}
+input{
+    min-width: 200px;
+    min-height: 1.5rem;
+}
+label{
+    font-size: larger;
 }
 
 
