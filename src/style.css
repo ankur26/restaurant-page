@@ -59,6 +59,7 @@ img{
 .menu-row{
     display: flex;
     align-items: baseline;
+    gap : 10px;
 }
 .menu-item{
     /* min-width: 50%; */
@@ -103,10 +104,16 @@ input,label{
 input{
     min-width: 200px;
     min-height: 1.5rem;
+    border-radius: 5px;
 }
 label{
     font-size: larger;
 }
+.selected{
+    /* background-color: limegreen; */
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 
-/*Typography*/

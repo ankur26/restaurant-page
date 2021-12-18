@@ -28,27 +28,54 @@ const renderMainMenu = () => {
 };
 
 contentDiv.appendChild(renderMainMenu());
-contentDiv.appendChild(helper.renderDiv("",[],"page"));
+
+const aboutNavLink = document.getElementById('main');
+const menuNavLink = document.getElementById('menu');
+const contactNavLink = document.getElementById('contact');
+const toggle=(a)=>{
+	aboutNavLink.classList.remove('selected');
+	menuNavLink.classList.remove('selected');
+	contactNavLink.classList.remove('selected');
+	console.log(a);
+	switch (a) {
+		case 1:
+			aboutNavLink.classList.add('selected');
+			break;
+		case 2:
+			menuNavLink.classList.add('selected');
+			break;
+		case 3:
+			contactNavLink.classList.add('selected');
+		default:
+			console.log("error");
+			break;
+	}
+}
+
+// console.log({aboutNavLink,menuNavLink,contactNavLink});
+contentDiv.appendChild(helper.renderDiv('', [], 'page'));
 // const pageDiv = document.getElementById('page');
-function renderMainPage(){
-    // pageDiv.innerHTML = '';
-    mainpage.render();
+function renderMainPage() {
+	// pageDiv.innerHTML = '';
+	toggle(1);
+	mainpage.render();
 }
-function renderMenuPage(){
-    // pageDiv.innerHTML = '';
-   menupage.render();
+function renderMenuPage() {
+	// pageDiv.innerHTML = '';
+	toggle(2);
+	menupage.render();
 }
-function renderContactPage(){
-    // pageDiv.innerHTML = '';
-    contactpage.render();
+function renderContactPage() {
+	// pageDiv.innerHTML = '';
+	toggle(3);
+	contactpage.render();
 }
 // function eventListner
 const mainPageLink = document.getElementById('main');
 const menuPageLink = document.getElementById('menu');
 const contactPageLink = document.getElementById('contact');
 
-
-mainPageLink.addEventListener('click',renderMainPage);
-menuPageLink.addEventListener('click',renderMenuPage);
-contactPageLink.addEventListener('click',renderContactPage);
+mainPageLink.addEventListener('click', renderMainPage);
+menuPageLink.addEventListener('click', renderMenuPage);
+contactPageLink.addEventListener('click', renderContactPage);
 renderMainPage();
